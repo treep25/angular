@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{ data.brand }} {{ data.model }}</h1>
+<div mat-dialog-content>
+  <p><strong>Year:</strong> {{ data.year }}</p>
+  <p><strong>Color:</strong> {{ data.color }}</p>
+  <div *ngIf="data.photoUrl" class="image-preview">
+    <img [src]="data.photoUrl" alt="Car Photo">
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

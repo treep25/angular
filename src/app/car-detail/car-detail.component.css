@@ -1,0 +1,64 @@
+.detail-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.detail-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail-card-content {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.detail-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.detail-card-actions button {
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.detail-card-actions button.delete-button {
+  color: #f44336;
+  background-color: transparent;
+}
+
+.detail-card-actions button.delete-button:hover {
+  color: #d32f2f;
+}
+
+.image-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-preview img:hover {
+  transform: scale(1.05);
+}

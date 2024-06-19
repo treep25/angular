@@ -1,0 +1,41 @@
+<!-- car-form.component.html -->
+<h1 mat-dialog-title>{{ data.id ? 'Edit Car' : 'Add Car' }}</h1>
+<div mat-dialog-content class="form-container">
+  <mat-form-field>
+    <mat-label>Brand</mat-label>
+    <input matInput [(ngModel)]="data.brand" name="brand">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Model</mat-label>
+    <input matInput [(ngModel)]="data.model" name="model">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input matInput [(ngModel)]="data.year" type="number" name="year">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Color</mat-label>
+    <input matInput [(ngModel)]="data.color" name="color">
+  </mat-form-field>
+
+  <div class="form-field">
+    <label for="fileInput">Upload Image</label>
+    <input type="file" id="fileInput" (change)="handleFileInput($event)">
+  </div>
+
+  <!-- Image preview -->
+  <div *ngIf="imageUrl" class="image-preview">
+    <img [src]="imageUrl" alt="Preview">
+    <button mat-icon-button color="warn" aria-label="Clear" (click)="clearFile()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>
