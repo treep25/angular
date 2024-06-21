@@ -4,8 +4,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { CarFormComponent } from '../car-form/car-form.component';
 import { CarDetailComponent } from '../car-detail/car-detail.component';
 import {MatCard, MatCardActions, MatCardContent, MatCardTitle} from "@angular/material/card";
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatIconButton} from "@angular/material/button";
 import {NgForOf} from "@angular/common";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-car-list',
@@ -16,7 +17,9 @@ import {NgForOf} from "@angular/common";
     MatCardContent,
     MatCard,
     MatButton,
-    NgForOf
+    NgForOf,
+    MatIconButton,
+    MatIcon
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.css'
@@ -51,6 +54,10 @@ export class CarListComponent implements OnInit {
         this.cars = this.carService.getCars();
       }
     });
+  }
+
+  openUserProfile() {
+    alert(`Name: John Smith\nAge: 23\nEmail: john.smith@yahoo.com\nBirthdate: 25 June 2001`);
   }
 
   openCarDetail(car: Car): void {

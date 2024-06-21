@@ -1,29 +1,37 @@
 <!-- car-form.component.html -->
 <h1 mat-dialog-title>{{ data.id ? 'Edit Car' : 'Add Car' }}</h1>
 <div mat-dialog-content class="form-container">
-  <mat-form-field>
-    <mat-label>Brand</mat-label>
-    <input matInput [(ngModel)]="data.brand" name="brand">
-  </mat-form-field>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <mat-label>Brand</mat-label>
+      <input matInput [(ngModel)]="data.brand" name="brand">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field>
-    <mat-label>Model</mat-label>
-    <input matInput [(ngModel)]="data.model" name="model">
-  </mat-form-field>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <mat-label>Model</mat-label>
+      <input matInput [(ngModel)]="data.model" name="model">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field>
-    <mat-label>Year</mat-label>
-    <input matInput [(ngModel)]="data.year" type="number" name="year">
-  </mat-form-field>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <mat-label>Year</mat-label>
+      <input matInput [(ngModel)]="data.year" type="number" name="year">
+    </mat-form-field>
+  </div>
 
-  <mat-form-field>
-    <mat-label>Color</mat-label>
-    <input matInput [(ngModel)]="data.color" name="color">
-  </mat-form-field>
+  <div class="form-group">
+    <mat-form-field class="full-width">
+      <mat-label>Color</mat-label>
+      <input matInput [(ngModel)]="data.color" name="color">
+    </mat-form-field>
+  </div>
 
-  <div class="form-field">
+  <div class="form-group">
     <label for="fileInput">Upload Image</label>
-    <input type="file" id="fileInput" (change)="handleFileInput($event)">
+    <input type="file" id="fileInput" class="form-control-file" (change)="handleFileInput($event)">
   </div>
 
   <!-- Image preview -->
@@ -35,7 +43,7 @@
   </div>
 </div>
 
-<div mat-dialog-actions>
+<div mat-dialog-actions class="dialog-actions">
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+  <button mat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Save</button>
 </div>

@@ -1,48 +1,38 @@
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.mat-card {
-  background-color: #fff;
+.text-right {
+  text-align: right;
+}
+
+.text-right button {
+  margin-left: 10px;
+}
+
+.user-profile-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  font-family: 'Roboto', sans-serif;
 }
 
-.mat-card:hover {
-  transform: translateY(-5px);
+.user-profile-container h3 {
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-.mat-card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.user-profile-container p {
+  font-size: 16px;
+  color: #333;
 }
 
-.mat-card-content {
-  padding: 10px;
-}
-
-.mat-card-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.mat-card-actions button {
-  color: #1976d2;
-  font-weight: bold;
-  border: none;
-  background: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.mat-card-actions button:hover {
-  color: #1565c0;
+.user-profile-container .profile-info {
+  margin-bottom: 15px;
 }

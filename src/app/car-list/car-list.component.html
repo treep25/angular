@@ -1,16 +1,26 @@
-<h2>Fleet Management</h2>
-<button mat-raised-button color="primary" (click)="openCarForm()">Add Car</button>
-<div *ngFor="let car of cars" style="margin: 10px 0;">
-  <mat-card>
-    <mat-card-title>{{ car.brand }} {{ car.model }}</mat-card-title>
-    <mat-card-content>
-      <p>Year: {{ car.year }}</p>
-      <p>Color: {{ car.color }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button (click)="openCarDetail(car)">View</button>
-      <button mat-button (click)="openCarForm(car)">Edit</button>
-      <button mat-button color="warn" (click)="deleteCar(car.id)">Delete</button>
-    </mat-card-actions>
-  </mat-card>
+<div class="container">
+  <h2 class="text-center my-4">Fleet Management</h2>
+  <div class="text-right mb-4">
+    <button mat-raised-button color="primary" (click)="openCarForm()">Add Car</button>
+    <button mat-icon-button color="primary" (click)="openUserProfile()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+
+  <div class="car-list-container">
+    <div *ngFor="let car of cars" class="car-card">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-title>{{ car.brand }} {{ car.model }}</mat-card-title>
+        <mat-card-content>
+          <p><strong>Year:</strong> {{ car.year }}</p>
+          <p><strong>Color:</strong> {{ car.color }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="openCarDetail(car)">View</button>
+          <button mat-button (click)="openCarForm(car)">Edit</button>
+          <button mat-button color="warn" (click)="deleteCar(car.id)">Delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
 </div>
